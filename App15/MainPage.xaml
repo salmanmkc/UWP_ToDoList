@@ -27,7 +27,6 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
         </Grid>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch">
             <TextBlock FontSize="36">To-do list</TextBlock>
@@ -49,11 +48,12 @@
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox IsChecked="{Binding IsComplete, Mode=TwoWay}" Content="{Binding TaskName}"></CheckBox>
+                        <CheckBox IsChecked="{Binding IsComplete, Mode=TwoWay}">
+                            <TextBlock TextDecorations="Strikethrough" Text="{Binding TaskName}"></TextBlock>
+                        </CheckBox>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
-           
         </StackPanel>
         <Border Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
         <Border Grid.Column="1" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
