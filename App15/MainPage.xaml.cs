@@ -13,7 +13,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace App15
 {
@@ -25,6 +24,15 @@ namespace App15
         public MainPage()
         {
             this.InitializeComponent();
+        }
+        public static void sum()
+        {
+            
+        }
+
+        private void ClickToAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
