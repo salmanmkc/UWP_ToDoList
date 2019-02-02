@@ -39,9 +39,14 @@
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch" >
-            <!--will be nice to add pictures into the items on the to do list as well-->
-            <CheckBox x:Name="item1">This is a sample item on the to do list</CheckBox>
-            <CheckBox x:Name="item2">This is another item on the to do list</CheckBox>
+            <ItemsControl ItemsSource="ssd">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox>Hello</CheckBox>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+           
         </StackPanel>
         <Border Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
         <Border Grid.Column="1" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
