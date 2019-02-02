@@ -45,8 +45,10 @@
         <Border Grid.Column="2" Background="#FFB09F71"></Border>
         <Border Grid.Row="1" Background="#FF91CBCB"></Border>
         <TextBlock Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Margin="0,0,40,0" HorizontalAlignment="Right" Text="username" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"></TextBlock>
+        <Button Margin="0,0,5,0" Content="(i)" HorizontalAlignment="Right" Grid.ColumnSpan="3"/>
         <StackPanel Grid.Row="1" Grid.Column="0">
-            <TextBlock Margin="5,0,0,0" FontSize="20">Salman Chishti</TextBlock>
+            <!--<TextBlock Margin="5,0,0,0" FontSize="10">Salman Chishti</TextBlock>-->
             <Button HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
         </StackPanel>
     </Grid>
