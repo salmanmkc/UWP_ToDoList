@@ -17,10 +17,10 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
 
             <ColumnDefinition Width="4.5*" ></ColumnDefinition>
-            <ColumnDefinition Width="2*" ></ColumnDefinition>
+            <ColumnDefinition Width="2.2*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
