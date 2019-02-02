@@ -28,10 +28,10 @@
             
         </Grid>
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0">
-            <TextBlock FontSize="36">Welcome to the application</TextBlock>
+            <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox Name="UserInputTaskName"></TextBox>
-            <Button>Click this</Button>
+            <Button Margin="0,5,0,0" CornerRadius="19,10,10,10" >Click this</Button>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
             
         </StackPanel>
@@ -46,10 +46,11 @@
         <Border Grid.Row="1" Background="#FF91CBCB"></Border>
         <TextBlock Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="2"></TextBlock>
         <TextBlock Margin="0,0,40,0" HorizontalAlignment="Right" Text="username" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"></TextBlock>
-        <Button Margin="0,0,5,0" Content="(i)" HorizontalAlignment="Right" Grid.ColumnSpan="3"/>
+        <Button Margin="0,0,5,0" Content="(i)" HorizontalAlignment="Right" Grid.ColumnSpan="3" CornerRadius="5,5,5,5"/>
         <StackPanel Grid.Row="1" Grid.Column="0">
             <!--<TextBlock Margin="5,0,0,0" FontSize="10">Salman Chishti</TextBlock>-->
-            <Button HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
+            <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
+            <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
     </Grid>
 </Page>
