@@ -32,14 +32,26 @@
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
-            <Button x:Name="clickToAdd" 
-                    Margin="0,5,0,0" 
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="add picture" 
+                    Margin="10,5,0,0" 
+                    CornerRadius="19,10,10,10"
+                    Command="{Binding CreateTask}"
+                    CommandParameter="{Binding}"
+                    >
+                    Add image
+                </Button>
+                <Button x:Name="clickToAdd" 
+                    HorizontalAlignment="Right"
+                    Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
                     >
                 Click this
-            </Button>
+                </Button>
+                
+            </StackPanel>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
 
         </StackPanel>
