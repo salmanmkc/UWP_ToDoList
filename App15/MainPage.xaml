@@ -42,7 +42,7 @@
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox IsChecked="{Binding IsComplete}" Content="{Binding TaskName}"></CheckBox>
+                        <CheckBox IsChecked="{Binding IsComplete, Mode=TwoWay}" Content="{Binding TaskName}"></CheckBox>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

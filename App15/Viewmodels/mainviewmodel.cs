@@ -25,7 +25,7 @@ namespace App15.Viewmodels
 
     internal class TaskViewModel
     {
-            public string taskName { get; set; }
+            public string TaskName { get; set; }
             public bool IsComplete { get; set; }
     }
 }
