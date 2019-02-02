@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App15.Viewmodels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,15 +25,8 @@ namespace App15
         public MainPage()
         {
             this.InitializeComponent();
+            this.DataContext = new MainViewModel();
         }
-        public static void sum()
-        {
-            
-        }
-
-        private void ClickToAdd_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+     
     }
 }

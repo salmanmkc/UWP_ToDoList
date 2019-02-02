@@ -32,17 +32,17 @@
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch">
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
-            <TextBox Name="UserInputTaskName"></TextBox>
+            <TextBox Name="UserInputTaskName" Text="{Binding NewTaskName}"></TextBox>
             <Button x:Name="clickToAdd" Margin="0,5,0,0" CornerRadius="19,10,10,10" Click="ClickToAdd_Click" >Click this</Button>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch" >
-            <ItemsControl ItemsSource="ssd">
+            <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox>Hello</CheckBox>
+                        <CheckBox IsChecked="{Binding IsComplete}" Content="{Binding TaskName}"></CheckBox>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
