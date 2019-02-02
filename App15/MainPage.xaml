@@ -13,10 +13,7 @@
             <RowDefinition Height="50"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Fill="#FFB09F71"></Rectangle>
-        <Rectangle Grid.Column="1" Fill="#FFB09F71"></Rectangle>
-        <Rectangle Grid.Column="2" Fill="#FFB09F71"></Rectangle>
-        <Rectangle Grid.Row="1" Fill="#FF91CBCB"></Rectangle>
+       
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -30,12 +27,12 @@
             </Grid.ColumnDefinitions>
             
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,0,0">
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0">
             <TextBlock FontSize="36">Welcome to the application</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox Name="UserInputTaskName"></TextBox>
             <Button>Click this</Button>
-            <TextBlock FontSize="50" Margin="0,20,0,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
+            <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
             
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="3" Margin="20,0,0,0" >
@@ -43,8 +40,13 @@
             <CheckBox>This is a sample item on the to do list</CheckBox>
             <CheckBox>This is another item on the to do list</CheckBox>
         </StackPanel>
+        <Border Background="#FFB09F71"></Border>
+        <Border Grid.Column="1" Background="#FFB09F71"></Border>
+        <Border Grid.Column="2" Background="#FFB09F71"></Border>
+        <Border Grid.Row="1" Background="#FF91CBCB"></Border>
+        <TextBlock Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="2"></TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="0">
-            <TextBlock FontSize="20">Student Manager</TextBlock>
+            <TextBlock Margin="5,0,0,0" FontSize="20">Salman Chishti</TextBlock>
             <Button HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
         </StackPanel>
     </Grid>
