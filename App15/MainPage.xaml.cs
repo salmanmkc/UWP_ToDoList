@@ -27,6 +27,10 @@ namespace App15
             this.InitializeComponent();
             this.DataContext = new MainViewModel();
         }
-     
+
+        private void ClickToAdd_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
