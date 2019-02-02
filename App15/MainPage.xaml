@@ -48,8 +48,8 @@
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox IsChecked="{Binding IsComplete, Mode=TwoWay}">
-                            <TextBlock TextDecorations="Strikethrough" Text="{Binding TaskName}"></TextBlock>
+                        <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete, Mode=TwoWay}">
+                            <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
                         </CheckBox>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
