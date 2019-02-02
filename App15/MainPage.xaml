@@ -10,9 +10,10 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
             <ColumnDefinition Width="20"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -21,14 +22,14 @@
             </Grid.ColumnDefinitions>
             
         </Grid>
-        <StackPanel Grid.Column="0">
+        <StackPanel Grid.Column="1">
             <TextBlock FontSize="36">Welcome to the application</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox></TextBox>
             <Button>Click this</Button>
             
         </StackPanel>
-        <StackPanel Grid.Column="2">
+        <StackPanel Grid.Column="3">
             <CheckBox>This is a sample item on the to do list</CheckBox>
             <CheckBox>This is another item on the to do list</CheckBox>
         </StackPanel>
