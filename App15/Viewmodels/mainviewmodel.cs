@@ -12,7 +12,7 @@ namespace App15.Viewmodels
      class MainViewModel : INotifyPropertyChanged
     {
         
-        private string newTaskName;
+        private string newTaskName = "";
         private ObservableCollection<TaskViewModel> tasks = new ObservableCollection<TaskViewModel>();
         public string NewTaskName
         {

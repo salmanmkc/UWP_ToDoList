@@ -33,18 +33,18 @@ namespace App15
 
         private async void Add_picture_ClickAsync(object sender, RoutedEventArgs e)
         {
-            var folderPicker = new Windows.Storage.Pickers.FolderPicker();
-            folderPicker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.Desktop;
-            folderPicker.FileTypeFilter.Add("*");
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
 
-            Windows.Storage.StorageFolder folder = await folderPicker.PickSingleFolderAsync();
-            if (folder != null)
+            Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+            if (file != null)
             {
-                // Application now has read/write access to all contents in the picked folder
-                // (including other sub-folder contents)
-                Windows.Storage.AccessCache.StorageApplicationPermissions.
-                FutureAccessList.AddOrReplace("PickedFolderToken", folder);
-                test.Text = "Picked folder: " + folder.Name;
+                // Application now has read/write access to the picked file
+                test.Text = "Picked photo: " + file.Name;
             }
             else
             {

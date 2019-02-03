@@ -46,12 +46,13 @@
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
                     >
-                Click this
+                    Click this
                 </Button>
                 <TextBlock Margin="20,0,0,0" x:Name="test" VerticalAlignment="Center"></TextBlock>
-                
+
             </StackPanel>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
+            <!--<Image Source=""-->
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
