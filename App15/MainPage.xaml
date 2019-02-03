@@ -36,8 +36,6 @@
                 <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
-                    Command="{Binding CreateTask}"
-                    CommandParameter="{Binding}"
                     Click="Add_picture_ClickAsync">
                     Add image
                 </Button>
@@ -50,6 +48,7 @@
                     >
                 Click this
                 </Button>
+                <TextBlock Margin="20,0,0,0" x:Name="test" VerticalAlignment="Center"></TextBlock>
                 
             </StackPanel>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>

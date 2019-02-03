@@ -44,11 +44,11 @@ namespace App15
                 // (including other sub-folder contents)
                 Windows.Storage.AccessCache.StorageApplicationPermissions.
                 FutureAccessList.AddOrReplace("PickedFolderToken", folder);
-                //this.textBlock.Text = "Picked folder: " + folder.Name;
+                test.Text = "Picked folder: " + folder.Name;
             }
             else
             {
-                //this.textBlock.Text = "Operation cancelled.";
+                test.Text = "Operation cancelled.";
             }
         }
     }
