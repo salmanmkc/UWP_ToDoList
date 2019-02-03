@@ -23,14 +23,19 @@ namespace App15.Command
         {
             if (parameter is MainViewModel viewModel)
             {
-                if(viewModel.NewTaskName == "")
+                if (viewModel.NewTaskName == "")
                 {
                     var dialog = new MessageDialog("Please enter a task name");
+                    dialog.Commands.Add(new UICommand { Label = "Ok", Id = 0 });
+                    dialog.Title = "No task to add";
                     await dialog.ShowAsync();
                 }
-                viewModel.Tasks.Add(new MainViewModel.TaskViewModel { IsComplete = false, TaskName = viewModel.NewTaskName });
-                viewModel.NewTaskName = "";   
-                CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+                else
+                {
+                    viewModel.Tasks.Add(new MainViewModel.TaskViewModel { IsComplete = false, TaskName = viewModel.NewTaskName });
+                    viewModel.NewTaskName = "";
+                    CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+                }
             }
         }
     }
