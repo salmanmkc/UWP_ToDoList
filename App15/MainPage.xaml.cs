@@ -14,7 +14,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
-
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.Storage;
+using System.Threading.Tasks;
+using Windows.Storage.Streams;
 
 namespace App15
 {
@@ -45,11 +48,26 @@ namespace App15
             {
                 // Application now has read/write access to the picked file
                 test.Text = "Picked photo: " + file.Name;
+                BitmapImage img = new BitmapImage();
+                img = await LoadImage(file);
+                imagetoadd.Source = img;
             }
             else
             {
                 test.Text = "Operation cancelled.";
             }
+        
+        }
+
+        private static async Task<BitmapImage> LoadImage(StorageFile file)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+            FileRandomAccessStream stream = (FileRandomAccessStream)await file.OpenAsync(FileAccessMode.Read);
+
+            bitmapImage.SetSource(stream);
+
+            return bitmapImage;
+
         }
     }
 }
