@@ -51,6 +51,7 @@ namespace App15
                 BitmapImage img = new BitmapImage();
                 img = await LoadImage(file);
                 imagetoadd.Source = img;
+                Remove_image.Visibility = Visibility.Visible;
             }
             else
             {
@@ -67,6 +68,11 @@ namespace App15
             bitmapImage.SetSource(stream);
 
             return bitmapImage;
+
+        }
+
+        private void Remove_image_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

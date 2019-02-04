@@ -36,7 +36,7 @@
                 <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
-                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, LeftMargin, RightMargin, TopMargin, BottomMargin"/>
+                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 <Button x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
@@ -49,6 +49,10 @@
             </Grid>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
             <Image x:Name="imagetoadd"/>
+            <Button x:Name="Remove_image" Visibility="Collapsed"
+                    CornerRadius="19,10,10,10"
+                    Click="Remove_image_Click"
+                        Content="Remove image" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" />
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
@@ -91,7 +95,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
-        <ContentControl Content="ContentControl" Grid.Column="1" Grid.Row="1" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,5,0,0" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
 
 
 
