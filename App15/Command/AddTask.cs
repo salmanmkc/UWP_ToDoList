@@ -26,10 +26,7 @@ namespace App15.Command
                     dialog.Title = "No task to add";
                     await dialog.ShowAsync();
                 }
-                else if (imagetoadd.Source)
-                {
-
-                }
+               
                 else
                 {
                     viewModel.Tasks.Add(new MainViewModel.TaskViewModel { IsComplete = false, TaskName = viewModel.NewTaskName });

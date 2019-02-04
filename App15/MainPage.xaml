@@ -32,25 +32,21 @@
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
-            <StackPanel Orientation="Horizontal">
+            <Grid Height="37">
                 <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
-                    Click="Add_picture_ClickAsync">
-                    Add image
-                </Button>
+                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, LeftMargin, RightMargin, TopMargin, BottomMargin"/>
                 <Button x:Name="clickToAdd" 
-                    HorizontalAlignment="Right"
-                    Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
-                    >
-                    Click this
-                </Button>
-                <TextBlock Margin="20,0,0,0" x:Name="test" VerticalAlignment="Center"></TextBlock>
+                    Margin="388,0,0,0" HorizontalAlignment="Left" Content="Click this" VerticalAlignment="Center" d:LayoutOverrides="HorizontalAlignment"
+                    />
+                <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
+                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
 
-            </StackPanel>
+            </Grid>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
             <Image x:Name="imagetoadd"/>
 
@@ -95,6 +91,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
+        <ContentControl Content="ContentControl" Grid.Column="1" Grid.Row="1" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="0,5,0,0" Grid.RowSpan="2" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
 
 
