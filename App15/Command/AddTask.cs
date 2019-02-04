@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using App15.Viewmodels;
 using Windows.UI.Popups;
@@ -29,6 +25,10 @@ namespace App15.Command
                     dialog.Commands.Add(new UICommand { Label = "Ok", Id = 0 });
                     dialog.Title = "No task to add";
                     await dialog.ShowAsync();
+                }
+                else if (imagetoadd.Source)
+                {
+
                 }
                 else
                 {

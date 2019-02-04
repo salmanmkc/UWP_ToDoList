@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace App15.Viewmodels
 {
@@ -46,8 +47,8 @@ namespace App15.Viewmodels
         {
             public string TaskName { get; set; }
             public bool IsComplete { get; set; }
+            public BitmapImage image { get; set; }
 
-        
         }
 }
 }

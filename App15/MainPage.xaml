@@ -60,9 +60,12 @@
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete, Mode=TwoWay}">
-                            <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
-                        </CheckBox>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete,  Mode=TwoWay}">
+                                <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
+                            </CheckBox>
+                            <Image Source="img"/>
+                        </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
