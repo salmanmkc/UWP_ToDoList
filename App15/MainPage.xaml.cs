@@ -73,7 +73,8 @@ namespace App15
 
         private void Remove_image_Click(object sender, RoutedEventArgs e)
         {
-
+            imagetoadd.Source = null;
+            Remove_image.Visibility = Visibility.Collapsed;
         }
     }
 }
