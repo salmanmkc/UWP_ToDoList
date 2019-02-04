@@ -81,8 +81,9 @@
         <Button Margin="248,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="4" VerticalAlignment="Center">
             <Button.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem Text="Item1"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="item2"></MenuFlyoutItem>
+                    <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Stats"></MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
