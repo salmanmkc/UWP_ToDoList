@@ -48,10 +48,13 @@ namespace App15.Viewmodels
             public string decoration;
             public string TaskName { get; set; }
             private bool complete;
-            public bool IsCopmlete
+            public bool IsComplete
             {
                 get { return complete; }
-                set { complete = value; }
+                set {
+                    decoration = "Strikethrough";
+                    complete = value;
+                }
             }
 
             //public string Decoration
