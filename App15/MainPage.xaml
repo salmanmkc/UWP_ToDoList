@@ -33,22 +33,23 @@
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
-       
-                <Button x:Name="add_picture" 
+            <StackPanel Orientation="Horizontal">
+            <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button 
+            <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
+            <Button 
                     Grid.Column="2" x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
-                    Margin="388,0,0,0"  Content="Click this" VerticalAlignment="Center" 
+                    Margin="388,0,0,0"  Content="Click this" VerticalAlignment="Top" 
                     />
-                <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
-                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
+            </StackPanel>
+            <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
 
-       
+
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
             <Image x:Name="imagetoadd"/>
             <Button x:Name="Remove_image" Visibility="Collapsed"
@@ -93,7 +94,7 @@
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
-    
+
         <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
