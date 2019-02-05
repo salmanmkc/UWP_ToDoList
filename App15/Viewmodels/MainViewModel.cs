@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace App15.Viewmodels
 {
-     class MainViewModel : INotifyPropertyChanged
+     class MainViewModel :INotifyPropertyChanged
     {
         
         private string newTaskName;
@@ -42,12 +42,10 @@ namespace App15.Viewmodels
         }
 
 
-        internal class TaskViewModel 
-        {
+        internal class TaskViewModel
+    {
             public string TaskName { get; set; }
             public bool IsComplete { get; set; }
-
-        
-        }
+    }
 }
 }
