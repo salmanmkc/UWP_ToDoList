@@ -47,19 +47,19 @@ namespace App15.Viewmodels
         {
             public string decoration;
             public string TaskName { get; set; }
-            private bool isCopmlete;
+            private bool complete;
             public bool IsCopmlete
             {
-                get { return isComplete; }
-                set { isComplete = value; }
+                get { return complete; }
+                set { complete = value; }
             }
 
-            public string Decoration
-            {
-                get { return decoration; }
-                set { if (IsComplete == true) decoration = "Strikethrough";
-                    else decoration = "";}
-            }
+            //public string Decoration
+            //{
+            //    get { return decoration; }
+            //    set { if (IsComplete == true) decoration = "Strikethrough";
+            //        else decoration = "";}
+            //}
 
             public BitmapImage image { get; set; }
 
