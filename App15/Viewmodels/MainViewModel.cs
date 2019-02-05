@@ -6,13 +6,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace App15.Viewmodels
 {
-     class MainViewModel :INotifyPropertyChanged
+     class MainViewModel : INotifyPropertyChanged
     {
         
-        private string newTaskName;
+        private string newTaskName = "";
         private ObservableCollection<TaskViewModel> tasks = new ObservableCollection<TaskViewModel>();
         public string NewTaskName
         {
@@ -42,10 +43,12 @@ namespace App15.Viewmodels
         }
 
 
-        internal class TaskViewModel
-    {
+        internal class TaskViewModel 
+        {
             public string TaskName { get; set; }
             public bool IsComplete { get; set; }
-    }
+            public BitmapImage image { get; set; }
+
+        }
 }
 }

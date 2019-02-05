@@ -16,60 +16,84 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*"></ColumnDefinition>
-            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="128*"></ColumnDefinition>
+            <ColumnDefinition Width="257*"></ColumnDefinition>
+            <ColumnDefinition Width="256*"/>
 
-            <ColumnDefinition Width="4.5*" ></ColumnDefinition>
-            <ColumnDefinition Width="2.2*" ></ColumnDefinition>
+            <ColumnDefinition Width="577*" ></ColumnDefinition>
+            <ColumnDefinition Width="282*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch">
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
-            <Button x:Name="clickToAdd" 
-                    Margin="0,5,0,0" 
+            <Grid Height="37">
+                <Button x:Name="add_picture" 
+                    Margin="10,5,0,0" 
+                    CornerRadius="19,10,10,10"
+                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Button x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
-                    >
-                Click this
-            </Button>
+                    Margin="388,0,0,0" HorizontalAlignment="Left" Content="Click this" VerticalAlignment="Center" d:LayoutOverrides="HorizontalAlignment"
+                    />
+                <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
+                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
+
+            </Grid>
             <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
+            <Image x:Name="imagetoadd"/>
+            <Button x:Name="Remove_image" Visibility="Collapsed"
+                    CornerRadius="19,10,10,10"
+                    Click="Remove_image_Click"
+                        Content="Remove image" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" />
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch" >
+        <StackPanel Grid.Row="1" Grid.Column="3" Margin="20,0,0,0" Grid.RowSpan="2" >
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete, Mode=TwoWay}">
-                            <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
-                        </CheckBox>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete,  Mode=TwoWay}">
+                                <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
+                            </CheckBox>
+                            <Image Source="img"/>
+                        </StackPanel>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>
-        <Border Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
-        <Border Grid.Column="1" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
-        <Border Grid.Column="2" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
-        <Border Grid.Column="3" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"></Border>
-        <Border Grid.Row="1" Background="#FF91CBCB" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch"></Border>
-        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="2" HorizontalAlignment="Stretch"></TextBlock>
-        <TextBlock Margin="150,0,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Center" FontSize="22" Grid.Column="3"/>
-        <Button Margin="248,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Center"/>
-        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch">
+        <Border Background="#FFB09F71"/>
+        <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2"/>
+        <Border Grid.Column="3" Background="#FFB09F71"/>
+        <Border Grid.Column="4" Background="#FFB09F71"/>
+        <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
+        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBlock Margin="150,0,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Center" FontSize="22" Grid.Column="4"/>
+        <Button Margin="248,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="4" VerticalAlignment="Center">
+            <Button.Flyout>
+                <MenuFlyout>
+                    <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Stats"></MenuFlyoutItem>
+                    <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
+                </MenuFlyout>
+            </Button.Flyout>
+        </Button>
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
             <!--<TextBlock Margin="5,0,0,0" FontSize="10">Salman Chishti</TextBlock>-->
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch">
+        <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="9*"></ColumnDefinition>
@@ -80,6 +104,7 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
+
 
 
 
