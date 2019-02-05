@@ -63,7 +63,7 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete,  Mode=TwoWay}">
-                                <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
+                                <TextBlock TextDecorations="{Binding Decoration}" Text="{Binding TaskName}" ></TextBlock>
                             </CheckBox>
                             <Image Source="img"/>
                         </StackPanel>
@@ -71,9 +71,9 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>
-        <Border Background="#FFB09F71"/>
-        <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2"/>
-        <Border Grid.Column="3" Background="#FFB09F71"/>
+        <Border Background="{ThemeResource SystemControlAcrylicElementBrush}"/>
+        <Border Grid.Column="1" Background="{ThemeResource SystemControlAcrylicElementBrush}" Grid.ColumnSpan="2"/>
+        <Border Grid.Column="3" Background="{ThemeResource SystemControlAcrylicElementBrush}"/>
         <Border Grid.Column="4" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
         <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"/>
@@ -92,7 +92,7 @@
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
-
+    
         <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>

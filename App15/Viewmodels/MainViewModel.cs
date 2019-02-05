@@ -47,6 +47,15 @@ namespace App15.Viewmodels
         {
             public string TaskName { get; set; }
             public bool IsComplete { get; set; }
+            private string decoration;
+
+            public string Decoration
+            {
+                get { return decoration; }
+                set { if (IsComplete = true) decoration = "Strikethrough";
+                    else decoration = "";}
+            }
+
             public BitmapImage image { get; set; }
 
         }
