@@ -38,7 +38,8 @@
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button x:Name="clickToAdd" 
+                <Button 
+                    Grid.Column="3" x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
