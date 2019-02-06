@@ -34,17 +34,17 @@
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
             <StackPanel Orientation="Horizontal">
-            <Button x:Name="add_picture" 
+                <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
-            <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
-            <Button 
+                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;" Margin="2,5,0,0"/>
+                <Button 
                     Grid.Column="2" x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
                     CommandParameter="{Binding}"
-                    Margin="388,0,0,0"  Content="Click this" VerticalAlignment="Top" 
+                    Content="Click this" VerticalAlignment="Top" Margin="2,5,0,0"
                     />
             </StackPanel>
             <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
