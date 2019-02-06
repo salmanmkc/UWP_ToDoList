@@ -18,7 +18,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="128*"></ColumnDefinition>
             <ColumnDefinition Width="500*"></ColumnDefinition>
-            
+
 
             <ColumnDefinition Width="577*" ></ColumnDefinition>
             <ColumnDefinition Width="282*" ></ColumnDefinition>
@@ -79,8 +79,8 @@
         <Border Grid.Column="4" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
         <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="150,0,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Center" FontSize="22" Grid.Column="4"/>
-        <Button Margin="248,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="4" VerticalAlignment="Center">
+        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3"/>
+        <Button Margin="111,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Center">
             <Button.Flyout>
                 <MenuFlyout>
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
