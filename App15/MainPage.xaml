@@ -65,7 +65,7 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <CheckBox x:Name="checkBoxToCheck" IsChecked="{Binding IsComplete,  Mode=TwoWay}">
-                                <TextBlock TextDecorations="{Binding Decoration, Mode=TwoWay}" Text="{Binding TaskName}" ></TextBlock>
+                                <TextBlock TextDecorations="{Binding Decoration}" Text="{Binding TaskName}" ></TextBlock>
                             </CheckBox>
                             <Image Source="img"/>
                         </StackPanel>
