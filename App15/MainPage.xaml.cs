@@ -29,6 +29,8 @@ namespace App15
         public MainPage()
         {
             this.InitializeComponent();
+            //subscribe to event
+            Application.Current.Resuming += Application_Resuming;
             this.DataContext = new MainViewModel();
             
         }
