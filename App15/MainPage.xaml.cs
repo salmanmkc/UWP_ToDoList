@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.Storage;
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
+using Windows.Media.Capture;
 
 namespace App15
 {
@@ -34,9 +35,51 @@ namespace App15
             this.DataContext = new MainViewModel();
             
         }
-   
 
-        private async void Add_picture_ClickAsync(object sender, RoutedEventArgs e)
+        private async void Application_Resuming(object sender, object o)
+        {
+            await InitializeCameraAsync();
+        }
+
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            await InitializeCameraAsync();
+        }
+
+        private async Task InitializeCameraAsync()
+        {
+            if (MediaCapture == null)
+            {
+                // Get the camera devices
+                var cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
+
+                // try to get the back facing device for a phone
+                var backFacingDevice = cameraDevices
+                    .FirstOrDefault(c => c.EnclosureLocation?.Panel == Windows.Devices.Enumeration.Panel.Back);
+
+                // but if that doesn't exist, take the first camera device available
+                var preferredDevice = backFacingDevice ?? cameraDevices.FirstOrDefault();
+
+                // Create MediaCapture
+                _mediaCapture = new MediaCapture();
+
+                // Initialize MediaCapture and settings
+                await _mediaCapture.InitializeAsync(
+                    new MediaCaptureInitializationSettings
+                    {
+                        VideoDeviceId = preferredDevice.Id
+                    });
+
+                // Set the preview source for the CaptureElement
+                PreviewControl.Source = _mediaCapture;
+
+                // Start viewing through the CaptureElement 
+                await _mediaCapture.StartPreviewAsync();
+            }
+        }
+    }
+
+    private async void Add_picture_ClickAsync(object sender, RoutedEventArgs e)
         {
             var picker = new Windows.Storage.Pickers.FileOpenPicker();
             picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
