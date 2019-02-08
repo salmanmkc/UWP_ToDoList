@@ -53,7 +53,7 @@ namespace App15
 
         private async Task InitializeCameraAsync()
         {
-            if (MediaCapture == null)
+            if (_mediacapture == null)
             {
                 // Get the camera devices
                 var cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
