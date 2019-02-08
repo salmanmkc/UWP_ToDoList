@@ -32,6 +32,8 @@ namespace App15
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private object _mediaCapture;
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -53,7 +55,7 @@ namespace App15
 
         private async Task InitializeCameraAsync()
         {
-            if (_mediacapture == null)
+            if (_mediaCapture == null)
             {
                 // Get the camera devices
                 var cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
