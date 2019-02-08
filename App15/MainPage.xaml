@@ -16,12 +16,12 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="128*"></ColumnDefinition>
-            <ColumnDefinition Width="500*"></ColumnDefinition>
+            <ColumnDefinition Width="107*"></ColumnDefinition>
+            <ColumnDefinition Width="326*"></ColumnDefinition>
 
 
-            <ColumnDefinition Width="577*" ></ColumnDefinition>
-            <ColumnDefinition Width="282*" ></ColumnDefinition>
+            <ColumnDefinition Width="397*" ></ColumnDefinition>
+            <ColumnDefinition Width="194*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -76,11 +76,11 @@
         <Border Background="#FFB09F71"/>
         <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2"/>
         <Border Grid.Column="3" Background="#FFB09F71"/>
-        <Border Grid.Column="4" Background="#FFB09F71"/>
+        <Border Grid.Column="3" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
-        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3"/>
-        <Button Margin="111,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Center">
+        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3" Height="29"/>
+        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" Height="29" Width="95"/>
+        <Button Margin="111,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Center" Height="32" Width="32">
             <Button.Flyout>
                 <MenuFlyout>
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
@@ -95,7 +95,7 @@
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="9*"></ColumnDefinition>
