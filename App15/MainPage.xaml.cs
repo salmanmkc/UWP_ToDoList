@@ -19,6 +19,11 @@ using Windows.Storage;
 using System.Threading.Tasks;
 using Windows.Storage.Streams;
 using Windows.Media.Capture;
+using Windows.Devices.Enumeration;
+using System.Text;
+using System.Threading.Tasks;
+using Windows.Devices.Enumeration;
+using Windows.Media.Capture;
 
 namespace App15
 {
