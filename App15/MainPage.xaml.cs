@@ -117,7 +117,7 @@ namespace App15
             BitmapImage bitmapImage = new BitmapImage();
             FileRandomAccessStream stream = (FileRandomAccessStream)await file.OpenAsync(FileAccessMode.Read);
 
-            bitmapImage.SetSource(stream);
+            bitmapImage.SetSource(stream);s
 
             return bitmapImage;
 
