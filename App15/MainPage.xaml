@@ -16,12 +16,11 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="128*"></ColumnDefinition>
-            <ColumnDefinition Width="257*"></ColumnDefinition>
-            <ColumnDefinition Width="256*"/>
+            <ColumnDefinition Width="77*"></ColumnDefinition>
+            <ColumnDefinition Width="258*"></ColumnDefinition>
 
-            <ColumnDefinition Width="577*" ></ColumnDefinition>
-            <ColumnDefinition Width="282*" ></ColumnDefinition>
+            <ColumnDefinition Width="245*" ></ColumnDefinition>
+            <ColumnDefinition Width="170*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
@@ -29,35 +28,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <TextBlock FontSize="36">To-do list</TextBlock>
-            <TextBlock>Below enter the task you want to add</TextBlock>
-            <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
-            <Grid Height="37">
-                <Button x:Name="add_picture" 
-                    Margin="10,5,0,0" 
-                    CornerRadius="19,10,10,10"
-                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <Button x:Name="clickToAdd" 
-                    CornerRadius="19,10,10,10"
-                    Command="{Binding CreateTask}"
-                    CommandParameter="{Binding}"
-                    Margin="388,0,0,0" HorizontalAlignment="Left" Content="Click this" VerticalAlignment="Center" d:LayoutOverrides="HorizontalAlignment"
-                    />
-                <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
-                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
-
-            </Grid>
-            <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding ElementName=UserInputTaskName, Path=Text}"></TextBlock>
-            <Image x:Name="imagetoadd"/>
-            <Button x:Name="Remove_image" Visibility="Collapsed"
-                    CornerRadius="19,10,10,10"
-                    Click="Remove_image_Click"
-                        Content="Remove image" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" />
-
-        </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
-        <StackPanel Grid.Row="1" Grid.Column="3" Margin="20,0,0,0" Grid.RowSpan="2" >
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" Grid.RowSpan="2" >
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -73,12 +45,12 @@
         </StackPanel>
         <Border Background="#FFB09F71"/>
         <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2"/>
+        <Border Grid.Column="2" Background="#FFB09F71"/>
         <Border Grid.Column="3" Background="#FFB09F71"/>
-        <Border Grid.Column="4" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
-        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="150,0,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Center" FontSize="22" Grid.Column="4"/>
-        <Button Margin="248,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="4" VerticalAlignment="Center">
+        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBlock Margin="150,11,95,10" Text="username" FontSize="22" Grid.Column="3"/>
+        <Button Margin="248,9,0,9" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Stretch" Width="32">
             <Button.Flyout>
                 <MenuFlyout>
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
@@ -93,7 +65,7 @@
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="4" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="9*"></ColumnDefinition>
@@ -104,6 +76,33 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>
+        <StackPanel Grid.Column="1" Margin="20,0,20,0" Height="950" Width="966" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Stretch" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+            <TextBlock FontSize="36"><Run Text="To-do list"/></TextBlock>
+            <TextBlock><Run Text="Below enter the task you want to add"/></TextBlock>
+            <TextBox PlaceholderText="Enter your task here" x:Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="451"/>
+            <Grid Height="37">
+                <Button x:Name="add_picture" 
+                    Margin="10,5,0,0" 
+                    CornerRadius="19,10,10,10"
+                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Button x:Name="clickToAdd" 
+                    CornerRadius="19,10,10,10"
+                    Command="{Binding CreateTask}"
+                    CommandParameter="{Binding}"
+                    Margin="388,0,0,0" HorizontalAlignment="Left" Content="Click this" VerticalAlignment="Center" d:LayoutOverrides="HorizontalAlignment"
+                    />
+                <TextBlock x:Name="test" VerticalAlignment="Center" Margin="203,0,0,0" HorizontalAlignment="Left"/>
+                <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" Margin="122,5,0,0" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;"/>
+
+            </Grid>
+            <TextBlock FontSize="50" Margin="0,20,10,0" Text="{Binding Text, ElementName=UserInputTaskName}"/>
+            <Image x:Name="imagetoadd"/>
+            <Button x:Name="Remove_image" Visibility="Collapsed"
+                    CornerRadius="19,10,10,10"
+                    Click="Remove_image_Click"
+                        Content="Remove image" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,0" />
+
+        </StackPanel>
 
 
 
