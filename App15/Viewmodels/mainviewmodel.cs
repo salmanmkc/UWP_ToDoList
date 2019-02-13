@@ -45,8 +45,37 @@ namespace App15.Viewmodels
 
         internal class TaskViewModel 
         {
+            public string decoration;
             public string TaskName { get; set; }
-            public bool IsComplete { get; set; }
+            private bool complete;
+            public bool IsComplete
+            {
+                get { return complete; }
+                set {
+                    decoration = "Strikethrough";
+                    complete = value;
+                }
+            }
+
+            public string Decoration
+            {
+                get {
+                   if(IsComplete == true)
+                    {
+                        decoration = "Striketrhough";
+                    }
+                    else{
+                        decoration = "";
+                    }
+                    return decoration;
+                }
+                set
+                {
+                    if (IsComplete == true) decoration = "Strikethrough";
+                    else decoration = "";
+                }
+            }
+
             public BitmapImage image { get; set; }
 
         }
