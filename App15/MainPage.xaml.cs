@@ -38,53 +38,53 @@ namespace App15
         {
             this.InitializeComponent();
             //subscribe to event
-            Application.Current.Resuming += Application_Resuming;
+            //Application.Current.Resuming += Application_Resuming;
             this.DataContext = new MainViewModel();
             
         }
 
-        private async void Application_Resuming(object sender, object o)
-        {
-            await InitializeCameraAsync();
-        }
+        //private async void Application_Resuming(object sender, object o)
+        //{
+        //    await InitializeCameraAsync();
+        //}
 
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
-            await InitializeCameraAsync();
-        }
+        //protected override async void OnNavigatedTo(NavigationEventArgs e)
+        //{
+        //    await InitializeCameraAsync();
+        //}
 
-        private async Task InitializeCameraAsync()
-        {
-            if (_mediaCapture == null)
-            {
-                // Get the camera devices
-                var cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
+    //    private async Task InitializeCameraAsync()
+    //    {
+    //        if (_mediaCapture == null)
+    //        {
+    //            // Get the camera devices
+    //            var cameraDevices = await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture);
 
-                // try to get the back facing device for a phone
-                var backFacingDevice = cameraDevices
-                    .FirstOrDefault(c => c.EnclosureLocation?.Panel == Windows.Devices.Enumeration.Panel.Back);
+    //            // try to get the back facing device for a phone
+    //            var backFacingDevice = cameraDevices
+    //                .FirstOrDefault(c => c.EnclosureLocation?.Panel == Windows.Devices.Enumeration.Panel.Back);
 
-                // but if that doesn't exist, take the first camera device available
-                var preferredDevice = backFacingDevice ?? cameraDevices.FirstOrDefault();
+    //            // but if that doesn't exist, take the first camera device available
+    //            var preferredDevice = backFacingDevice ?? cameraDevices.FirstOrDefault();
 
-                // Create MediaCapture
-                _mediaCapture = new MediaCapture();
+    //            // Create MediaCapture
+    //            _mediaCapture = new MediaCapture();
 
-                // Initialize MediaCapture and settings
-                await _mediaCapture.InitializeAsync(
-                    new MediaCaptureInitializationSettings
-                    {
-                        VideoDeviceId = preferredDevice.Id
-                    });
+    //            // Initialize MediaCapture and settings
+    //            await _mediaCapture.InitializeAsync(
+    //                new MediaCaptureInitializationSettings
+    //                {
+    //                    VideoDeviceId = preferredDevice.Id
+    //                });
 
-                // Set the preview source for the CaptureElement
-                PreviewControl.Source = _mediaCapture;
+    //            // Set the preview source for the CaptureElement
+    //            PreviewControl.Source = _mediaCapture;
 
-                // Start viewing through the CaptureElement 
-                await _mediaCapture.StartPreviewAsync();
-            }
-        }
-    }
+    //            // Start viewing through the CaptureElement 
+    //            await _mediaCapture.StartPreviewAsync();
+    //        }
+    //    }
+    //}
 
     private async void Add_picture_ClickAsync(object sender, RoutedEventArgs e)
         {
@@ -117,7 +117,7 @@ namespace App15
             BitmapImage bitmapImage = new BitmapImage();
             FileRandomAccessStream stream = (FileRandomAccessStream)await file.OpenAsync(FileAccessMode.Read);
 
-            bitmapImage.SetSource(stream);s
+            bitmapImage.SetSource(stream);
 
             return bitmapImage;
 
