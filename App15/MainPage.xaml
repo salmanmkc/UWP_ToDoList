@@ -37,12 +37,12 @@
                 <Button x:Name="add_picture" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
-                    Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                    Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" >
                     <Button.Flyout>
                         <MenuFlyout>
                             <MenuFlyoutItem Text="Paste image"></MenuFlyoutItem>
                             <MenuFlyoutItem Text="Search for image"></MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Use last image"></MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Image from file"></MenuFlyoutItem>
                         </MenuFlyout>
                     </Button.Flyout>
                 </Button>
