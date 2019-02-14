@@ -39,9 +39,11 @@
                     CornerRadius="19,10,10,10"
                     Click="Add_picture_ClickAsync" Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" >
                     <Button.Flyout>
-                       
-                            <MenuFlyoutItem>test</MenuFlyoutItem>
-                        
+                        <MenuFlyout>
+                            <MenuFlyoutItem Text="Paste image"></MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Search for image"></MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Use last image"></MenuFlyoutItem>
+                        </MenuFlyout>
                     </Button.Flyout>
                 </Button>
                 <Button x:Name="TakePhoto" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;" Margin="2,5,0,0"/>
