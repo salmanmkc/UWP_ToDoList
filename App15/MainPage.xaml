@@ -87,10 +87,10 @@
         <Border Grid.Column="3" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
         <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
+        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" />
         <Button Margin="111,9,0,9" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Stretch" Width="32">
             <Button.Flyout>
-                <MenuFlyout Placement="Bottom">
+                <MenuFlyout Placement="Bottom" ShowMode="TransientWithDismissOnPointerMoveAway">
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
                     <MenuFlyoutItem Text="Stats"></MenuFlyoutItem>
                     <MenuFlyoutItem Text="Settings"></MenuFlyoutItem>
