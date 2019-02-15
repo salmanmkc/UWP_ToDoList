@@ -67,6 +67,7 @@
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
+        <Button></Button>
         <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" Grid.RowSpan="2" >
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
