@@ -30,7 +30,7 @@ namespace App15
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private object _mediaCapture;
+        //private object _mediaCapture;
 
         public MainPage()
         {
