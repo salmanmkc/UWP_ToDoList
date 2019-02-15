@@ -11,8 +11,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="91*"></RowDefinition>
-            <RowDefinition Height="226*"/>
+            <RowDefinition Height="47*"></RowDefinition>
+            <RowDefinition Height="71*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -86,9 +86,9 @@
         <Border Grid.Column="3" Background="#FFB09F71"/>
         <Border Grid.Column="3" Background="#FFB09F71"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
-        <TextBlock Margin="10,0,0,0" Text="Student Oraniser UWP" VerticalAlignment="Center" FontSize="22" Grid.ColumnSpan="3" Height="29"/>
-        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" Height="29" Width="95"/>
-        <Button Margin="111,0,0,0" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Center" Height="32" Width="32">
+        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3"/>
+        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3"/>
+        <Button Margin="111,9,0,9" Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Stretch" Width="32">
             <Button.Flyout>
                 <MenuFlyout>
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
