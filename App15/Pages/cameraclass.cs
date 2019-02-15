@@ -11,7 +11,7 @@ namespace App15.Pages
     class cameraclass
     {
         // Provides functionality to preview and capture the photograph
-        private MediaCapture _mediaCapture;
+        //private MediaCapture _mediaCapture;
       
     }
 }
