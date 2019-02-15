@@ -42,7 +42,7 @@
                         <MenuFlyout>
                             <MenuFlyoutItem Text="Paste image"></MenuFlyoutItem>
                             <MenuFlyoutItem Text="Search for image"></MenuFlyoutItem>
-                            <MenuFlyoutItem Click="Add_picture_ClickAsync"Text="Image from file"></MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Image from file" Click="Add_picture_ClickAsync" ></MenuFlyoutItem>
                         </MenuFlyout>
                     </Button.Flyout>
                 </Button>
