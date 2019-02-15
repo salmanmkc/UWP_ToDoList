@@ -39,7 +39,7 @@
                     CornerRadius="19,10,10,10"
                     Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" >
                     <Button.Flyout>
-                        <MenuFlyout>
+                        <MenuFlyout Placement="Bottom">
                             <MenuFlyoutItem Text="Paste image"></MenuFlyoutItem>
                             <MenuFlyoutItem Text="Search for image"></MenuFlyoutItem>
                             <MenuFlyoutItem Text="Image from file" Click="Add_picture_ClickAsync" ></MenuFlyoutItem>
