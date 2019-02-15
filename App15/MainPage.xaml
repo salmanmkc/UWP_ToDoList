@@ -11,8 +11,8 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
-            <RowDefinition Height="47*"></RowDefinition>
-            <RowDefinition Height="71*"/>
+            <RowDefinition Height="14*"></RowDefinition>
+            <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -23,13 +23,13 @@
             <ColumnDefinition Width="397*" ></ColumnDefinition>
             <ColumnDefinition Width="194*" ></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0">
+        <Grid Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
         </Grid>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" Grid.RowSpan="2" >
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,0,20,0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <TextBlock FontSize="36">To-do list</TextBlock>
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
@@ -67,7 +67,7 @@
 
         </StackPanel>
         <!--<Border Grid.Column="2" Grid.Row="1" Background="Aquamarine"/>-->
-        <Button Grid.Column="2" Grid.Row="1">hello
+        <Button Grid.Column="2" Grid.Row="1" HorizontalAlignment="Left" Height="0" Margin="0,113,0,27" VerticalAlignment="Stretch" Width="51" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">hello
             <Button.Flyout>
                 <MenuFlyout Placement="Right" ShowMode="TransientWithDismissOnPointerMoveAway">
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
@@ -76,7 +76,7 @@
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
-        <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" Grid.RowSpan="2" >
+        <StackPanel Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" Grid.RowSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
             <ItemsControl ItemsSource="{Binding Tasks}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
@@ -90,14 +90,14 @@
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>
-        <Border Background="#FFB09F71"/>
-        <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2"/>
-        <Border Grid.Column="3" Background="#FFB09F71"/>
-        <Border Grid.Column="3" Background="#FFB09F71"/>
-        <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2"/>
-        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3"/>
-        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" />
-        <Button  Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Stretch" Width="32">
+        <Border Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <Border Grid.Column="1" Background="#FFB09F71" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <Border Grid.Column="3" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <Border Grid.Column="3" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Margin="10,12,0,0" HorizontalAlignment="Left" Text="username" VerticalAlignment="Top" FontSize="22" Grid.Column="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" />
+        <Button  Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3" VerticalAlignment="Stretch" Width="32" Margin="0,0,0,0">
             <Button.Flyout>
                 <MenuFlyout Placement="Bottom" ShowMode="TransientWithDismissOnPointerMoveAway" ToolTipService.ToolTip="Add an image from file, take a new one or">
                     <MenuFlyoutItem Text="My profile"></MenuFlyoutItem>
@@ -106,13 +106,13 @@
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
-        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2">
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <!--<TextBlock Margin="5,0,0,0" FontSize="10">Salman Chishti</TextBlock>-->
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,10,0,0">Home Page</Button>
             <Button CornerRadius="5,4,0,0" HorizontalAlignment="Stretch" Margin="10,2,0,0">Calender</Button>
         </StackPanel>
 
-        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="2">
+        <Grid Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"></ColumnDefinition>
                 <ColumnDefinition Width="9*"></ColumnDefinition>
