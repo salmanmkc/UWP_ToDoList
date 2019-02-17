@@ -34,7 +34,7 @@
             <TextBlock>Below enter the task you want to add</TextBlock>
             <TextBox PlaceholderText="Enter your task here" Name="UserInputTaskName" Text="{Binding NewTaskName, Mode=TwoWay}"></TextBox>
             <StackPanel Orientation="Horizontal">
-                <Button x:Name="add_picture" 
+                <Button x:Name="add_picture" ToolTipService.ToolTip="Add an image" 
                     Margin="10,5,0,0" 
                     CornerRadius="19,10,10,10"
                     Content="Add image" HorizontalAlignment="Left" VerticalAlignment="Top" >
