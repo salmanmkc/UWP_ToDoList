@@ -48,6 +48,7 @@
                 </Button>
                 <Button x:Name="TakePhoto" ToolTipService.ToolTip="Take a picture" CornerRadius="19,10,10,10"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Height="32"  FontFamily="Segoe MDL2 Assets" Content="&#xE722;" Margin="2,5,0,0"/>
                 <Button 
+                    ToolTipService.ToolTip="Add item to the to do list"
                     Grid.Column="2" x:Name="clickToAdd" 
                     CornerRadius="19,10,10,10"
                     Command="{Binding CreateTask}"
