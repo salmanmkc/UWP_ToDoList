@@ -41,7 +41,7 @@
                     <Button.Flyout>
                         <MenuFlyout Placement="Bottom" ShowMode="TransientWithDismissOnPointerMoveAway">
                             <MenuFlyoutItem Text="Paste image"></MenuFlyoutItem>
-                            <MenuFlyoutItem Text="Search for image"></MenuFlyoutItem>
+                            <MenuFlyoutItem Text="Search for images"></MenuFlyoutItem>
                             <MenuFlyoutItem Text="Image from file" Click="Add_picture_ClickAsync" ></MenuFlyoutItem>
                         </MenuFlyout>
                     </Button.Flyout>
