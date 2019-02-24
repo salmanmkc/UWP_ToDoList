@@ -88,7 +88,7 @@
         <Border Grid.Column="3" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
         <Border Grid.Column="3" Background="#FFB09F71" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
         <Border Grid.Row="1" Background="#FF91CBCB" Grid.RowSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
-        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Margin="10,11,0,10" Text="Student Oraniser UWP" FontSize="22" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Anita  Semi-square"/>
         <StackPanel Grid.Column="3" Orientation="Horizontal">
             <Button  Content="(i)" HorizontalAlignment="Left" CornerRadius="5,5,5,5" Grid.Column="3"  Width="32" Margin="0,0,0,0" ToolTipService.ToolTip="Settings" >
                 <Button.Flyout>
